@@ -48,7 +48,6 @@ class JcropWidget extends \yii\base\Widget
      */
     public function init()
     {
-        parent::init();
         if (!isset($this->htmlOptions['id'])) {
             $this->htmlOptions['id'] = $this->getId();
         }
