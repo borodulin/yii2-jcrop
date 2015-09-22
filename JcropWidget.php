@@ -8,9 +8,8 @@
 namespace conquer\jcrop;
 
 use yii\helpers\Html;
-use conquer\helpers\Json;
-use yii\web\JsExpression;
 use yii\helpers\Url;
+use conquer\helpers\Json;
 
 /**
  * @author Andrey Borodulin
