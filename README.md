@@ -4,7 +4,7 @@ Yii2 Jcrop
 ## Description
 
 Jcrop is a powerful image cropping tool for jQuery. For more than five years, Jcrop has offered web builders an easy way to add image cropping functionality to their applications. Now, in 2014, it's been totally redesigned to be better than ever. Jcrop can also be found powering image cropping functionality in popular open source software such as Wordpress, and web-based services like Gravatar.com.
-For more information please visit [Highcharts](http://jcrop.org/) 
+For more information please visit [Jcrop](http://jcrop.org/) 
 
 # Installation
 
