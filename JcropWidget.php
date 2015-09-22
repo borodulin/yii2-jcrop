@@ -10,6 +10,7 @@ namespace conquer\jcrop;
 use yii\helpers\Html;
 use conquer\helpers\Json;
 use yii\web\JsExpression;
+use yii\helpers\Url;
 
 /**
  * @author Andrey Borodulin
@@ -22,14 +23,20 @@ class JcropWidget extends \yii\base\Widget
      * @link http://jcrop.org/doc/options
      * @var array
      */
-    public $options;
+    public $options = [];
 
     /**
      * Container tag
      * @var string
      */
-    public $tag = 'div';
+    public $tag = 'img';
 
+    /**
+     * @see Url::to()
+     * @var mixed
+     */
+    public $src;
+    
     /**
      * Container html options
      * @var array
@@ -50,6 +57,12 @@ class JcropWidget extends \yii\base\Widget
     {
         if (!isset($this->htmlOptions['id'])) {
             $this->htmlOptions['id'] = $this->getId();
+        }
+        if (isset($this->src)) {
+            $this->htmlOptions['src'] = Url::to($this->src);
+        }
+        if (($this->tag == 'img') && !isset($this->htmlOptions['alt'])) {
+            $this->htmlOptions['alt'] = '';
         }
         echo Html::beginTag($this->tag, $this->htmlOptions);
     }
